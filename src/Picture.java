@@ -104,23 +104,25 @@ public class Picture extends SimplePicture
   /** pixelates an image
   */
 
-  public void pixelate() {
+   public void pixelate() {
     
   }
-
+	
 	public void keepOnlyBlue()   
 	{     
 
-		 Pixel[][] pixels = this.getPixels2D();
-
+		Pixel[][] pixels = this.getPixels2D();
+		//makes a blank canvas
 		// Pixel[][] pixels = this.getPixels2D();     
 		Pixel pixel = null;     
+		
 		for (int row = 0; row < pixels.length; row++)     
 		{       for (int col = 0; col < pixels[0].length; col++)       
 			{        
 								pixel = pixels[row][col];         
 		 						pixel.setRed(0);         
 		 						pixel.setGreen(0);       
+				// iterates through the pixels array, giving pixel a new value each time  
 			}     
 		}  
 	}
